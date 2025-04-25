@@ -4,108 +4,164 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ali Raza - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f0f4f8;
-      padding: 30px;
+      background-color: #f4f9fb;
+      margin: 0;
+      padding: 0;
     }
-    .cv-container {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    .cv-wrapper {
+      display: flex;
+      min-height: 100vh;
+    }
+    .left-panel {
+      background-color: #14213d;
+      color: white;
+      width: 35%;
+      padding: 50px 30px;
+    }
+    .right-panel {
+      background-color: white;
+      width: 65%;
+      padding: 50px 60px;
+    }
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 20px;
+    }
+    .name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+    .title {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #43bccd;
     }
     .section-title {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.3rem;
-      margin-top: 20px;
-      border-bottom: 2px solid #0077b6;
-      padding-bottom: 5px;
-      padding-top: 10px;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
       font-weight: 600;
-      color: #0077b6;
+      color: #14213d;
+      border-bottom: 2px solid #43bccd;
+      padding-bottom: 5px;
     }
-    .contact-info {
-      font-size: 0.95rem;
+    .info-block {
+      margin-bottom: 35px;
     }
-    .profile-box {
-      background: linear-gradient(90deg, #03045e, #0077b6);
-      color: white;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 25px;
+    .info-block ul {
+      padding-left: 20px;
     }
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #ffffff;
-      margin-bottom: 10px;
+    .contact-info i {
+      margin-right: 10px;
     }
-    h1.name {
+    .left-panel h5 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 5px;
+      font-weight: 600;
+      margin-top: 30px;
+      font-size: 1.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding-bottom: 6px;
+    }
+    .left-panel ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .left-panel ul li {
+      margin-bottom: 12px;
+    }
+    .icon-text {
+      display: flex;
+      align-items: center;
+    }
+    .icon-text i {
+      margin-right: 12px;
+      width: 20px;
+      text-align: center;
+    }
+    p, li {
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
-  <div class="container cv-container">
-    <div class="text-center profile-box">
-      <img src="../images/profile1.jpg" alt="Ali Raza Profile Picture" class="profile-pic">
-      <h1 class="name">Ali Raza</h1>
-      <p class="contact-info">
-        Phone: 0318-3199347 | Email: ar1606937@gmail.com<br>
-        Location: Hyderabad Pakistan
-      </p>
-    </div>
+  <div class="cv-wrapper">
+    <div class="left-panel text-center">
+      <img src="../images/profile1.jpg" alt="Ali Raza" class="profile-pic">
+      <div class="name">Ali Raza</div>
+      <div class="title">Web Developer</div>
 
-    <div class="text-start">
-      <div class="section-title">Professional Summary</div>
-      <p>Motivated and enthusiastic individual with over 6 years of combined experience in education and sales. Proficient in front-end web development including HTML5, CSS3, and JavaScript, with ongoing learning in PHP, MySQL, and WordPress. Demonstrates excellent communication skills, adaptability, and a strong commitment to continuous professional development.</p>
+      <h5>About Me</h5>
+      <p>Motivated and enthusiastic individual with 6+ years of experience in education and sales, currently pursuing a career in web development.</p>
 
-      <div class="section-title">Technical Skills</div>
-      <ul>
-        <li><strong>Front-End Development:</strong> HTML5, CSS3, JavaScript</li>
-        <li><strong>Back-End & CMS (Learning):</strong> PHP, MySQL, WordPress</li>
-        <li><strong>Soft Skills:</strong> Strong communication, Team Leadership, Customer Handling</li>
-        <li><strong>Other Skills:</strong> Computer Operations, Internet Browsing, MS Office</li>
+      <h5>Contact</h5>
+      <ul class="contact-info text-start">
+        <li class="icon-text"><i class="fas fa-phone"></i>0318-3199347</li>
+        <li class="icon-text"><i class="fas fa-envelope"></i>ar1606937@gmail.com</li>
+        <li class="icon-text"><i class="fas fa-location-dot"></i>hyderabad Pakistan</li>
       </ul>
 
-      <div class="section-title">Professional Experience</div>
-      <p><strong>Master’s Foundation School</strong><br>
-      <em>English and Computer Teacher | Jan 2021 – Dec 2022</em><br>
-      - Taught English language and basic computer courses to secondary level students.<br>
-      - Developed lesson plans and used interactive methods to enhance learning outcomes.</p>
-
-      <p><strong>Local Market Retail Stores</strong><br>
-      <em>Salesman & Sales Manager | 2020 – 2025</em><br>
-      - Managed daily sales operations, maintained customer satisfaction, and trained junior staff.<br>
-      - Contributed to increased store revenue through strong product knowledge and client engagement.</p>
-
-      <div class="section-title">Education</div>
-      <ul>
-        <li><strong>Associate Degree in Commerce (Ongoing)</strong> – City College Hyderabad , Expected Graduation: 2028</li>
-        <li><strong>Intermediate (Pre-Engineering)</strong> – Ghulam Hussain Hidayat Ullah High School & College, Passed: 2023</li>
+      <h5>Skills</h5>
+      <ul class="text-start">
+        <li>HTML5, CSS3, JavaScript</li>
+        <li>PHP, MySQL (Learning)</li>
+        <li>WordPress (Learning)</li>
+        <li>Team Leadership</li>
+        <li>MS Office, Internet Browsing</li>
       </ul>
 
-      <div class="section-title">Languages</div>
-      <ul>
+      <h5>Languages</h5>
+      <ul class="text-start">
         <li>English (Fluent)</li>
         <li>Urdu (Native)</li>
       </ul>
+    </div>
 
-      <div class="section-title">Additional Information</div>
-      <ul>
-        <li>Strong interest in web development and digital technologies</li>
-        <li>Active learner and always eager to take on new challenges</li>
-        <li>Excellent interpersonal and team collaboration abilities</li>
-      </ul>
+    <div class="right-panel">
+      <div class="info-block">
+        <div class="section-title">Professional Summary</div>
+        <p>Proficient in front-end web development, with strong communication skills and a passion for technology. Experienced in both academic and sales sectors with a proactive and collaborative mindset.</p>
+      </div>
+
+      <div class="info-block">
+        <div class="section-title">Professional Experience</div>
+        <p><strong>Master’s Foundation School</strong><br>
+        <em>English and Computer Teacher | Jan 2021 – Dec 2022</em><br>
+        • Taught English and computer basics at the secondary level.<br>
+        • Developed interactive lesson plans.</p>
+
+        <p><strong>Local Market Retail Stores</strong><br>
+        <em>Salesman & Sales Manager | 2020 – 2025</em><br>
+        • Handled sales, trained staff, and boosted customer satisfaction.<br>
+        • Increased revenue via effective client engagement.</p>
+      </div>
+
+      <div class="info-block">
+        <div class="section-title">Education</div>
+        <ul>
+          <li><strong>Associate Degree in Commerce (Ongoing)</strong> – City College Hyderabad Pakistan, Expected: 2027</li>
+          <li><strong>Intermediate (Pre-Engineering)</strong> – Ghulam Hussain Hidayat Ullah High School & College, Passed: 2023</li>
+        </ul>
+      </div>
+
+      <div class="info-block">
+        <div class="section-title">Additional Information</div>
+        <ul>
+          <li>Active learner and tech enthusiast</li>
+          <li>Excellent interpersonal skills</li>
+          <li>Enjoys collaborative environments</li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
