@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .profile-card, .edit-form {
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+    .profile-card p {
+      margin-bottom: 0.6rem;
+    }
+    h2, h4 {
+      color: #343a40;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+    label {
+      margin-top: 0.5rem;
+      color: #495057;
+    }
+    .btn-success {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body class="p-5">
+  <div class="container">
+    <h2 class="mb-4 text-center">User Profile</h2>
+
+    <!-- Profile Card -->
+    <div class="card p-4 profile-card">
+      <p><strong>Name:</strong> <span id="name">Ali</span></p>
+      <p><strong>Father Name:</strong> <span id="fatherName">Ahmed</span></p>
+      <p><strong>Email:</strong> <span id="email">ali@example.com</span></p>
+      <p><strong>Age:</strong> <span id="age">25</span></p>
+      <p><strong>Contact:</strong> <span id="contact">03001234567</span></p>
+      <div class="text-end">
+        <button class="btn btn-primary" onclick="editProfile()">Edit Profile</button>
+      </div>
+    </div>
+
+    <!-- Edit Form -->
+    <form id="editForm" class="card p-4 mt-4 edit-form" style="display:none;" onsubmit="updateProfile(event)">
+      <h4 class="mb-3">Edit Your Profile</h4>
+      <label><strong>Name:</strong></label>
+      <input type="text" id="editName" class="form-control mb-2" placeholder="Name" required>
+      <label><strong>Father Name:</strong></label>
+      <input type="text" id="editFatherName" class="form-control mb-2" placeholder="Father Name" required>
+      <label><strong>Email:</strong></label>
+      <input type="email" id="editEmail" class="form-control mb-2" placeholder="Email" required>
+      <label><strong>Age:</strong></label>
+      <input type="number" id="editAge" class="form-control mb-2" placeholder="Age" required>
+      <label><strong>Contact:</strong></label>
+      <input type="text" id="editContact" class="form-control mb-2" placeholder="Contact" required>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function editProfile() {
+      const confirmEdit = confirm("Do you want to edit your profile?");
+      if (confirmEdit) {
+        // Fill form with current values
+        document.getElementById("editName").value = document.getElementById("name").innerText;
+        document.getElementById("editFatherName").value = document.getElementById("fatherName").innerText;
+        document.getElementById("editEmail").value = document.getElementById("email").innerText;
+        document.getElementById("editAge").value = document.getElementById("age").innerText;
+        document.getElementById("editContact").value = document.getElementById("contact").innerText;
+
+        document.getElementById("editForm").style.display = "block";
+        window.scrollTo({ top: document.getElementById("editForm").offsetTop, behavior: 'smooth' });
+      }
+    }
+
+    function updateProfile(event) {
+      event.preventDefault();
+      document.getElementById("name").innerText = document.getElementById("editName").value;
+      document.getElementById("fatherName").innerText = document.getElementById("editFatherName").value;
+      document.getElementById("email").innerText = document.getElementById("editEmail").value;
+      document.getElementById("age").innerText = document.getElementById("editAge").value;
+      document.getElementById("contact").innerText = document.getElementById("editContact").value;
+
+      document.getElementById("editForm").style.display = "none";
+      alert("Profile updated successfully!");
+    }
+  </script>
+</body>
+</html>
