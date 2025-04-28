@@ -1,0 +1,129 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* Color Theme */
+:root {
+    --primary-color: #ff5722; /* Professional Deep Orange */
+    --dark-color: #212121;    /* Dark Black */
+    --light-color: #f4f6f8;   /* Light Background */
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--dark-color) !important;
+}.navbar .lname:hover{
+    color:#ff5722
+}
+.navbar .nav-link {
+    color: #ddd;
+    transition: color 0.3s;
+}
+.navbar .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Banner */
+#banner {
+    height: 90vh;
+    background: linear-gradient(rgba(33, 33, 33, 0.7), rgba(33, 33, 33, 0.7)),
+    url('https://source.unsplash.com/1600x900/?technology,workspace') no-repeat center center/cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#banner h1, #banner h3, #banner p {
+    animation: fadeInDown 1s forwards;
+}
+
+/* Section Headings */
+h2 {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    transition: background 0.3s, transform 0.3s;
+}
+.btn-primary:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+/* Products Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* About Us Section */
+#aboutus {
+    background-color: #fff;
+    padding: 50px 0;
+}
+#aboutus p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Contact Form */
+form input, form textarea {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+form input:focus, form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: #bbb;
+    font-size: 14px;
+}
+footer p {
+    margin: 0;
+}
+
+/* Scroll Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Keyframes for banner text */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

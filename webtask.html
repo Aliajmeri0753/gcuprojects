@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creative.ar | Tech Accessories Shop</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="webtask.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand lname" href="#">Creative.ar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#banner">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#aboutus">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contactus">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link position-relative" href="#" id="cartBtn">
+            🛒 Cart <span id="cart-count" class="badge bg-light text-dark">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Banner -->
+<section id="banner" class="d-flex align-items-center justify-content-center text-center text-white">
+  <div class="container">
+    <h1 class="display-4 animate__animated">Tech Accessories at Your Fingertips</h1>
+    <h3 class="animate__animated">Latest. Affordable. Durable.</h3>
+    <p class="lead animate__animated">Get the best accessories for all your devices!</p>
+    <a href="#products" class="btn btn-primary mt-3">Explore Products</a>
+  </div>
+</section>
+
+<!-- Filter -->
+<section class="py-4 text-center">
+  <div class="container">
+    <select id="sort-products" class="form-select w-50 mx-auto">
+      <option value="">Sort by</option>
+      <option value="low">Price: Low to High</option>
+      <option value="high">Price: High to Low</option>
+    </select>
+  </div>
+</section>
+
+<!-- Products -->
+<section id="products" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 animate__animated">Our Products</h2>
+    <div class="row g-4" id="product-list">
+
+      <!-- Product cards will be dynamically inserted from JS -->
+
+    </div>
+  </div>
+</section>
+
+<!-- About Us -->
+<section id="aboutus" class="py-5 bg-light reveal">
+  <div class="container">
+    <h2 class="reveal">About Us</h2>
+    <p class="reveal">We are a professional tech accessories provider
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias dolor dolorum voluptatum, aperiam corrupti quas excepturi modi laudantium. Hic, amet soluta mollitia incidunt ab facere dolore laudantium cumque sequi ipsum!Lorem
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla earum nobis, culpa maxime labore sit quos, sunt distinctio vero odit sed mollitia numquam suscipit iusto tempora totam architecto quod eaque.
+    </p>    
+  </div>
+</section>
+
+<!-- Contact Us -->
+<section id="contactus" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 animate__animated">Contact Us</h2>
+    <form class="w-75 mx-auto">
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3">
+  <p>&copy; 2025 Creative.ar | All Rights Reserved.</p>
+</footer>
+
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="cart-items">
+        Your cart is empty.
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-dismiss="modal">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap + JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="webtask.js"></script>
+
+</body>
+</html>
