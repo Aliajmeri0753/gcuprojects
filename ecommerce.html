@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creative.ar | Premium Online Shopping</title>
+  <meta name="description" content="Shop premium products with fast shipping and exceptional customer service at LuxeMarket - your destination for quality online shopping.">
+  <link rel="stylesheet" href="ecommerce.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="#hero" class="logo">
+        <span class="creative">Creative</span>
+        <span class="ar">.ar</span>
+      </a>
+      <div class="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#featured" class="nav-link">Products</a>
+        <a href="#categories" class="nav-link">Categories</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Search products..." class="search-input">
+          <button id="search-button">
+            <span class="text">Search</span>
+          </button>
+        </div>
+        <a href="#account" class="nav-icon" aria-label="Account">
+          <i class="icon-user"></i>
+        </a>
+        <button class="nav-icon cart-btn" aria-label="Cart">
+          <i class="fab-solid fa-cart-shopping"></i>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1 id="main-heading">Elevate Your Lifestyle with Premium Products</h1>
+      <!-- <script>
+        // Headings ka array
+        const headings = [
+          "Elevate Your Lifestyle with Premium Products...",
+          "Discover the Future of Smart Accessories...",
+          "Style Meets Function in Every Product",
+          "Unleash Your Potential with Our Tech"
+        ];
+      
+        let index = 0;
+        const headingElement = document.getElementById("main-heading");
+      
+        setInterval(() => {
+          index = (index + 1) % headings.length; // loop back to 0
+          headingElement.style.opacity = 0; // fade out
+          setTimeout(() => {
+            headingElement.innerHTML = headings[index]; // change text
+            headingElement.style.opacity = 1; // fade in
+          }, 500);
+        }, 3000); // Change every 3 seconds
+      </script> -->
+      
+      <p>Discover curated collections of high-quality products that combine style, innovation, and exceptional craftsmanship.</p>
+      <div class="hero-buttons">
+        <a href="#featured" class="btn btn-primary">Shop Now</a>
+        <a href="#promo" class="btn btn-outline">Featured Products</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="products/bluetoothspeaker.jpg" alt="Premium electronics">
+      <img src="products/gaminheadphone.jpg" alt="Premium electronics">
+      <img src="products/smartwatch.jpg" alt="Premium electronics">
+      <img src="products/earbuds.jpg" alt="Premium electronics">
+      <div class="hero-badge">
+        <p>New Arrivals</p>
+        <h3>Up to 40% Off</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section id="featured" class="featured">
+  <div class="container">
+    <div class="section-header">
+      <h2>Featured Products</h2>
+      <a href="#categories" class="btn btn-link">View All Categories</a>
+    </div>
+    <div class="product-grid" id="featured-products">
+      <!-- JavaScript will populate products here -->
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section id="categories" class="categories">
+  <div class="container">
+    <h2 class="text-center">Shop by Category</h2>
+    <div class="category-grid">
+      <!-- Categories Cards -->
+      <div class="category-card">
+        <img src="https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg" alt="Electronics">
+        <div class="category-content">
+          <h3>Electronics</h3>
+          <p>Discover the latest tech innovations</p>
+          <a href="#featured" class="btn btn-light">Browse Products</a>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg" alt="Clothing">
+        <div class="category-content">
+          <h3>Clothing</h3>
+          <p>Stylish apparel for every occasion</p>
+          <a href="#featured" class="btn btn-light">Browse Products</a>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg" alt="Home & Kitchen">
+        <div class="category-content">
+          <h3>Home & Kitchen</h3>
+          <p>Essentials for modern living</p>
+          <a href="#featured" class="btn btn-light">Browse Products</a>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg" alt="Beauty">
+        <div class="category-content">
+          <h3>Beauty</h3>
+          <p>Premium skincare and cosmetics</p>
+          <a href="#featured" class="btn btn-light">Browse Products</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Promo Section -->
+<section id="promo" class="promo">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature">
+        <i class="icon-truck"></i>
+        <div>
+          <h5>Free Shipping</h5>
+          <p>On orders over $50</p>
+        </div>
+      </div>
+      <div class="feature">
+        <i class="icon-shield"></i>
+        <div>
+          <h5>Secure Payment</h5>
+          <p>100% secure checkout</p>
+        </div>
+      </div>
+      <div class="feature">
+        <i class="icon-clock"></i>
+        <div>
+          <h5>30-Day Returns</h5>
+          <p>Hassle-free returns</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="promo-grid">
+      <div class="promo-card">
+        <img src="https://images.pexels.com/photos/1294886/pexels-photo-1294886.jpeg" alt="New Arrivals">
+        <div class="promo-content">
+          <h2>New Arrivals</h2>
+          <p>Discover the latest products fresh in stock</p>
+          <a href="#featured" class="btn btn-light">Shop Now</a>
+        </div>
+      </div>
+      <div class="promo-card">
+        <img src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg" alt="Special Offers">
+        <div class="promo-content">
+          <h2>Special Offers</h2>
+          <p>Save up to 40% on selected items</p>
+          <a href="#featured" class="btn btn-primary">View Deals</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Us -->
+<section id="about" class="about">
+  <div class="container">
+    <h2>About LuxeMarket</h2>
+    <p>At LuxeMarket, we believe in delivering a premium shopping experience with a carefully curated selection of high-quality products. Our mission is to blend innovation with elegance to enrich your lifestyle. With fast shipping, secure payment, and exceptional customer service, LuxeMarket is your trusted online destination for quality and style.</p>
+  </div>
+</section>
+
+<!-- Contact Us -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h5>Creative.ar</h5>
+        <p>Discover a premium shopping experience with our curated selection of high-quality products.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#featured">Products</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact Info</h5>
+        <ul class="contact-info">
+          <li><i class="icon-map-pin"></i>1234 Market St, San Francisco, CA 94103</li>
+          <li><i class="icon-phone"></i>+1 (555) 123-4567</li>
+          <li><i class="icon-mail"></i>support@luxemarket.com</li>
+          <li><i class="icon-clock"></i>Mon-Fri: 9AM-6PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 LuxeMarket. All rights reserved.</p>
+      <div class="footer-features">
+        <span><i class="icon-shield"></i>Secure Payment</span>
+        <span><i class="icon-truck"></i>Fast Delivery</span>
+        <span><i class="icon-credit-card"></i>Easy Returns</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h3>Shopping Cart</h3>
+    <button class="close-cart" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="cart-total">$0.00</span>
+    </div>
+    <a href="#checkout" class="btn btn-primary btn-block">Checkout</a>
+  </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<script src="ecommerce.js"></script>
+
+</body>
+</html>
