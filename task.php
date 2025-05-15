@@ -1,15 +1,4 @@
- <?php
-    $name = $_POST['name'];
-    $fname = $_POST['fname'];
-    $email = $_POST['email'];
-    $contact = $_POST['contact'];
-    $address = $_POST['address'];
-    if(isset($_POST['submit'])){
-        echo "hello";
-    }else{
-        echo "error";
-    }
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
