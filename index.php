@@ -1,7 +1,6 @@
 <?php
 // index.php
 
-// Check if form was submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'] ?? '';
     $fname = $_POST['fname'] ?? '';
@@ -9,53 +8,93 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $contact = $_POST['contact'] ?? '';
     $address = $_POST['address'] ?? '';
 } else {
-    header("Location: form.php"); // If accessed directly, redirect back
+    header("Location: form.php");
     exit();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Submitted Data</title>
+  <title>Form Submission</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #eef2f3;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fa;
       padding: 40px;
+      margin: 0;
     }
-    .data-container {
-      max-width: 600px;
+
+    .container {
+      max-width: 700px;
       margin: auto;
-      background: white;
+      background: #ffffff;
       border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
     }
-    h2 {
+
+    .header {
+      background-color: #1e90ff;
+      color: white;
+      padding: 20px;
       text-align: center;
-      margin-bottom: 30px;
+      font-size: 24px;
+      letter-spacing: 1px;
     }
-    .data-field {
-      margin-bottom: 15px;
-      font-size: 18px;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
     }
-    .data-label {
-      font-weight: bold;
+
+    th, td {
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 17px;
+    }
+
+    th {
+      background-color: #f0f4f8;
+      color: #333;
+      width: 30%;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9fbfd;
+    }
+
+    tr:hover {
+      background-color: #eef6ff;
     }
   </style>
 </head>
 <body>
 
-  <div class="data-container">
-    <h2>Submitted Data</h2>
-
-    <div class="data-field"><span class="data-label">Full Name:</span> <?= htmlspecialchars($name) ?></div>
-    <div class="data-field"><span class="data-label">Father's Name:</span> <?= htmlspecialchars($fname) ?></div>
-    <div class="data-field"><span class="data-label">Email:</span> <?= htmlspecialchars($email) ?></div>
-    <div class="data-field"><span class="data-label">Contact:</span> <?= htmlspecialchars($contact) ?></div>
-    <div class="data-field"><span class="data-label">Address:</span> <?= nl2br(htmlspecialchars($address)) ?></div>
+  <div class="container">
+    <div class="header">📋 Submitted Form Data</div>
+    <table>
+      <tr>
+        <th>Full Name</th>
+        <td><?= htmlspecialchars($name) ?></td>
+      </tr>
+      <tr>
+        <th>Father's Name</th>
+        <td><?= htmlspecialchars($fname) ?></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td><?= htmlspecialchars($email) ?></td>
+      </tr>
+      <tr>
+        <th>Contact</th>
+        <td><?= htmlspecialchars($contact) ?></td>
+      </tr>
+      <tr>
+        <th>Address</th>
+        <td><?= nl2br(htmlspecialchars($address)) ?></td>
+      </tr>
+    </table>
   </div>
 
 </body>
